@@ -32,8 +32,6 @@ function setup() {
     new_box.immovable = true;
     boxes.add(new_box);
   }
-
-  // spike = new Group();
 }
 
 function draw() {
