@@ -7,7 +7,7 @@ function setup() {
   createCanvas(300, 600);
 
   ball = createSprite(150, 50, 30, 30);
-  ball.draw = function () { fill(255, 0, 0); circle(0, 0, 20, 20); }
+  ball.draw = function () { fill(255, 255, 255); circle(0, 0, 20, 20); }
   ball.velocity.y = 2;
 
 
@@ -33,7 +33,7 @@ function setup() {
     new_box.immovable = true;
     if (random(0, 1) < 0.2) {
       spikes.add(new_box)
-      new_box.shapeColor = color(255, 255, 255);
+      new_box.shapeColor = color(255, 0, 0);
     }
     boxes.add(new_box);
   }
@@ -114,10 +114,10 @@ function changetype(box, val) {
   }
 
   if (val && !found) {
-    box.shapeColor = color(255, 255, 255)
+    box.shapeColor = color(255, 0, 0);
     spikes.add(box)
   } else if (!val && found) {
     spikes.remove(box)
-    box.shapeColor = color(random(0, 250), random(0, 250), random(0, 250))
+    box.shapeColor = color(random(5, 250), random(5, 250), random(5, 250))
   }
 }
